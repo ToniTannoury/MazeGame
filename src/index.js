@@ -344,3 +344,28 @@ game.scene.add('Level2', Level2);
 game.scene.add('Level3', Level3);
 
 game.scene.start('scene');
+
+class GameOverScene extends Phaser.Scene {
+
+  create() {
+    
+    console.log(Level1.children)
+    console.log(Level2.children)
+    console.log(Level3.children)
+    console.log(111111111111111111111111)
+    
+    const gameOverText = this.add.text(400, 200, 'GAME OVER', {
+      fontSize: '100px',
+      fontFamily: 'Zen Dots',
+      color: '#DEF2F1',
+    }).setOrigin(0.5);
+
+    const playAgainText = this.add.text(400, 400, 'PLAY AGAIN?', {
+      fontSize: '48px',
+      fontFamily: 'Zen Dots',
+      color: '#17252A',
+    }).setOrigin(0.5);
+
+
+  }
+}
