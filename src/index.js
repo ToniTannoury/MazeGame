@@ -101,6 +101,11 @@ function create(){
   const desiredScale = 1.8; // Increase the size by 1.2 times
   player.setScale((playerSize / player.width) * desiredScale);
   end.setScale((playerSize / player.width)*2);
+
+  this.physics.add.collider(player, walls);
+  this.physics.add.collider(player, end, function () {
+    handleEndCollision(scene, tileSize);
+  });
 }
 
 function update() {
