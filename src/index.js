@@ -365,7 +365,35 @@ class GameOverScene extends Phaser.Scene {
       fontFamily: 'Zen Dots',
       color: '#17252A',
     }).setOrigin(0.5);
+	
+	
+    
 
+    // Inside the create() function of the GameOverScene
+	const yesButton = this.add.text(400, 300, 'Yes', { fill: '#ffffff' }).setInteractive();
+	yesButton.on('pointerdown', () => {
+  	level=0
+  	gameOverText.destroy()
+  	playAgainText.destroy()
+  	yesButton.destroy()
+  	noButton.destroy()
+  	game.scene.start('Level3');
+	});
+
+
+    // Inside the create() function of the GameOverScene
+	const noButton = this.add.text(600, 300, 'No', { fill: '#ffffff' }).setInteractive();
+	noButton.on('pointerdown', () => {
+ 	 const gameContainer = document.getElementById('game-container');
+  	const wrapper = document.querySelector('.wrapper');
+  	level=0
+ 	 gameOverText.destroy()
+ 	 playAgainText.destroy()
+  	yesButton.destroy()
+ 	 noButton.destroy()
+ 	 game.scene.start('Level3');
+ 	 wrapper.style.display = 'block';
+	});
 
   }
 }
