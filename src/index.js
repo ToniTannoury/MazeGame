@@ -220,4 +220,7 @@ class NewScene extends Phaser.Scene {
   }
 }
 const game = new Phaser.Game(config);
+
+game.scene.add('NewScene', NewScene);
+
 game.scene.start('scene');
