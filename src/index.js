@@ -123,6 +123,23 @@ function update() {
     player.setVelocityY(120);
   } 
 }
+
+function handleKeyInput(scene, key) {
+  keyDownTime += scene.game.loop.delta;
+  const tileIndex = calculateTileIndex(keyDownTime);
+  
+  if (tileIndex !== currentTileIndex) {
+    currentTileIndex = tileIndex;
+    const tileKey = `tile0${tileIndexes[key][tileIndex]}`;
+    player.setTexture(tileKey);
+  }
+}
+
+function calculateTileIndex(time) {
+  const index = Math.floor((time % 400) / 100);
+  return index;
+}
+
 function createMaze(level) {
   const tileSize = 40;
   for (let row = 0; row < mazes[level].length; row++) {
