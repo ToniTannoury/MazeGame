@@ -108,6 +108,13 @@ function create(){
   });
 }
 
+function switchToNewScene(level) {
+  player.destroy();
+  end.destroy()
+  game.scene.start('NewScene', {
+    level: level
+  });
+}
 function handleEndCollision(scene) {
   walls.clear(true, true);
   scene.children.each((child) => {
@@ -115,9 +122,11 @@ function handleEndCollision(scene) {
       child.destroy();
     }
   });
+
   const nextLevel = level + 1;
   if (nextLevel < mazes.length) {
-      console.log('new level')    
+    switchToNewScene(nextLevel);
+    player.setPosition(100, 100);
   }
 }
 
