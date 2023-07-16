@@ -88,7 +88,19 @@ function preload(){
 function create(){
   walls = this.physics.add.staticGroup();
   createMaze.call(this, level);
+
+  const tileSize = 30;
+  const playerSize = tileSize * 1.2; // Increase the player size
+
+  const scene = this;
+
   player = this.physics.add.sprite(90, 90, 'tile001');
+  end = this.physics.add.sprite(190, 200);
+  end.setTexture('tile035');
+
+  const desiredScale = 1.8; // Increase the size by 1.2 times
+  player.setScale((playerSize / player.width) * desiredScale);
+  end.setScale((playerSize / player.width)*2);
 }
 
 function update(){
