@@ -58,7 +58,28 @@ const mazes = [
 ];
 
 function preload(){
-
+  this.load.spritesheet('player', 'src/assets/11111.png', { frameWidth: 32, frameHeight: 32 });
+  this.load.image('wallImage', 'src/assets/wall.png')
+  this.load.image('tile000', 'src/assets/tile000.png');
+  this.load.image('tile001', 'src/assets/tile001.png');
+  this.load.image('tile002', 'src/assets/tile002.png');
+  this.load.image('tile003', 'src/assets/tile003.png');
+  this.load.image('tile004', 'src/assets/tile004.png');
+  this.load.image('tile005', 'src/assets/tile005.png');
+  this.load.image('tile006', 'src/assets/tile006.png');
+  this.load.image('tile007', 'src/assets/tile007.png');
+  this.load.image('tile008', 'src/assets/tile008.png');
+  this.load.image('tile009', 'src/assets/tile009.png');
+  this.load.image('tile010', 'src/assets/tile010.png');
+  this.load.image('tile011', 'src/assets/tile011.png');
+  this.load.image('tile012', 'src/assets/tile012.png');
+  this.load.image('tile013', 'src/assets/tile013.png');
+  this.load.image('tile014', 'src/assets/tile014.png');
+  this.load.image('tile015', 'src/assets/tile015.png');
+  this.load.image('tile016', 'src/assets/tile016.png');
+  this.load.image('tile017', 'src/assets/tile017.png');
+  this.load.image('tile018', 'src/assets/tile018.png');
+  this.load.image('tile035', 'src/assets/tile035.png');
 }
 
 function create(){
