@@ -103,10 +103,21 @@ function create(){
   end.setScale((playerSize / player.width)*2);
 }
 
-function update(){
+function update() {
+  const cursors = this.input.keyboard.createCursorKeys();
 
+  player.setVelocity(0);
+
+  if (cursors.left.isDown) {
+    player.setVelocityX(-120);
+  } else if (cursors.right.isDown) {
+    player.setVelocityX(120);
+  } else if (cursors.up.isDown) {
+    player.setVelocityY(-120);
+  } else if (cursors.down.isDown) {
+    player.setVelocityY(120);
+  } 
 }
-
 function createMaze(level) {
   const tileSize = 40;
   for (let row = 0; row < mazes[level].length; row++) {
