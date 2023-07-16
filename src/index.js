@@ -59,6 +59,38 @@ const mazes = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 1, 0, 0 ,0 ,0 ,0 ,1 ,1 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,1 ,1 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+  ],  [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 1, 1, 1, 1, 1, 1,1, 1, 1, 1, 1, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 1, 1, 1, 1, 1, 1,1, 1, 1, 1, 1, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 1, 1, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 1, 1, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 1, 1, 1, 1, 1, 1, 1,1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,1 ,1 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 1, 1, 1, 1, 1, 1, 1,1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,1 ,1 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 1, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 1, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 0, 0, 0, 0, 0, 1, 1, 1, 1,1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,1 ,1 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 0, 0, 0, 0, 0, 1, 1, 1, 1,1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,1 ,1 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+  ], [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 0, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 1, 1, 1, 1, 1, 1, 1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 1, 1, 1, 1, 1, 1, 1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 1, 1, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 1, 1, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 1, 1, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 1, 1, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 1, 1, 1, 1, 1, 1, 1,1, 1, 1, 1, 1, 1, 1, 1, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 1, 1, 1, 1, 1, 1, 1, 1, 1,1, 1, 1, 1, 1, 1, 1, 1, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 1, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 1, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 1, 0, 0 ,0 ,0 ,0 ,1 ,1 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,1 ,1 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
   ]
 ];
 
@@ -126,15 +158,29 @@ function showLevelIndicator(scene) {
   levelText.setOrigin(1, 0);
 }
 function switchToNewScene(level) {
+  console.log(level)
   levelText.destroy();
   player.destroy();
   end.destroy()
-  game.scene.start('NewScene', {
-    level: level
-  });
+  if(level===1){
+    game.scene.start('Level1', {
+      level: level
+    });
+  }else if (level===2){
+    console.log(11)
+    game.scene.start('Level2', {
+      level: level
+    });
+  }else{
+    game.scene.start('Level3', {
+      level: level
+    });
+  }
+  
   
 }
 function handleEndCollision(scene) {
+  console.log(scene)
   walls.clear(true, true);
   scene.children.each((child) => {
     if (child instanceof Phaser.GameObjects.Rectangle) {
@@ -166,16 +212,16 @@ function update() {
   player.setVelocity(0);
 
   if (cursors.left.isDown) {
-    player.setVelocityX(-120);
+    player.setVelocityX(-500);
     handleKeyInput(this,'left');
   } else if (cursors.right.isDown) {
-    player.setVelocityX(120);
+    player.setVelocityX(500);
     handleKeyInput(this,'right');
   } else if (cursors.up.isDown) {
-    player.setVelocityY(-120);
+    player.setVelocityY(-500);
     handleKeyInput(this,'up');
   } else if (cursors.down.isDown) {
-    player.setVelocityY(120);
+    player.setVelocityY(500);
     handleKeyInput(this,'down');
   } else {
     keyDownTime = 0;
@@ -200,6 +246,9 @@ function calculateTileIndex(time) {
 }
 
 function createMaze(level) {
+  if(level===2){
+    console.log("lvl2")
+  }
   const tileSize = 40;
   for (let row = 0; row < mazes[level].length; row++) {
     for (let col = 0; col < mazes[level][row].length; col++) {
@@ -221,13 +270,14 @@ function createMaze(level) {
 }
 
 
-class NewScene extends Phaser.Scene {
+class Level1 extends Phaser.Scene {
   
   create(data) {
     const newWalls = this.physics.add.staticGroup();
     walls = newWalls;
     createMaze.call(this, data.level);
-    const tileSize = 30;
+    const tileSize = 30;  
+    const scene = this;
     const playerSize = tileSize * 1.2; // Increase the player size
     player = this.physics.add.sprite(100, 100, 'tile001');
     end = this.physics.add.sprite(950, 510 , 'tile035');
@@ -237,12 +287,61 @@ class NewScene extends Phaser.Scene {
     showLevelIndicator(this);
     this.physics.add.collider(player, walls);
     this.physics.add.collider(player, end, function () {
-      handleEndCollision(this, tileSize);
+      handleEndCollision(scene);
     });
   }
 }
+class Level2 extends Phaser.Scene {
+  
+  create(data) {
+    console.log(1)
+    const newWalls = this.physics.add.staticGroup();
+    walls = newWalls;
+    createMaze.call(this, data.level);
+    const tileSize = 30;
+    const scene = this;
+    const playerSize = tileSize * 1.2; // Increase the player size
+    player = this.physics.add.sprite(100, 100, 'tile001');
+    end = this.physics.add.sprite(300, 510 , 'tile035');
+    const desiredScale = 1.8; // Increase the size by 1.2 times
+    player.setScale((playerSize / player.width) * desiredScale);
+    end.setScale((playerSize / player.width)*2);
+    showLevelIndicator(this);
+    this.physics.add.collider(player, walls);
+    this.physics.add.collider(player, end, function () {
+      handleEndCollision(scene);
+    });
+  }
+}
+
+class Level3 extends Phaser.Scene {
+  
+  create(data) {
+    const newWalls = this.physics.add.staticGroup();
+    walls = newWalls;
+    createMaze.call(this, data.level);
+    const tileSize = 30;  
+    const scene = this;
+    const playerSize = tileSize * 1.2; // Increase the player size
+    player = this.physics.add.sprite(100, 100, 'tile001');
+    end = this.physics.add.sprite(950, 510 , 'tile035');
+    const desiredScale = 1.8; // Increase the size by 1.2 times
+    player.setScale((playerSize / player.width) * desiredScale);
+    end.setScale((playerSize / player.width)*2);
+    showLevelIndicator(this);
+    this.physics.add.collider(player, walls);
+    this.physics.add.collider(player, end, function () {
+      handleEndCollision(scene);
+    });
+  }
+}
+
 const game = new Phaser.Game(config);
 
-game.scene.add('NewScene', NewScene);
+game.scene.add('Level1', Level1);
+
+game.scene.add('Level2', Level2);
+
+game.scene.add('Level3', Level3);
 
 game.scene.start('scene');
