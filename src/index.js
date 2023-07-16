@@ -200,5 +200,24 @@ function createMaze(level) {
 }
 
 
+class NewScene extends Phaser.Scene {
+  
+  create(data) {
+    const newWalls = this.physics.add.staticGroup();
+    walls = newWalls;
+    createMaze.call(this, data.level);
+    const tileSize = 30;
+    const playerSize = tileSize * 1.2; // Increase the player size
+    player = this.physics.add.sprite(100, 100, 'tile001');
+    end = this.physics.add.sprite(950, 510 , 'tile035');
+    const desiredScale = 1.8; // Increase the size by 1.2 times
+    player.setScale((playerSize / player.width) * desiredScale);
+    end.setScale((playerSize / player.width)*2);
+    this.physics.add.collider(player, walls);
+    this.physics.add.collider(player, end, function () {
+      handleEndCollision(this, tileSize);
+    });
+  }
+}
 const game = new Phaser.Game(config);
 game.scene.start('scene');
