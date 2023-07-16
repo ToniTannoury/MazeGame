@@ -1,4 +1,7 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
 .wrapper{
     height: 100vh;
     overflow-y: auto;
@@ -58,5 +61,6 @@ section{
     font-size: 16px;
     cursor: pointer;
 }
-
-
+.button:hover {
+    background-color: #23527c;
+}
