@@ -17,6 +17,7 @@ const config = {
     preload:preload,
     create: create,
     update: update,
+ 
   },
 };
 
@@ -24,6 +25,7 @@ let walls;
 let player;
 let level = 0;
 let end;
+let levelText; 
 const mazes = [
   [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
@@ -85,6 +87,9 @@ function preload(){
   this.load.image('tile035', 'src/assets/tile035.png');
 }
 
+
+
+
 function create(){
   walls = this.physics.add.staticGroup();
   createMaze.call(this, level);
@@ -101,19 +106,33 @@ function create(){
   const desiredScale = 1.8; // Increase the size by 1.2 times
   player.setScale((playerSize / player.width) * desiredScale);
   end.setScale((playerSize / player.width)*2);
-
+  showLevelIndicator(this);
   this.physics.add.collider(player, walls);
   this.physics.add.collider(player, end, function () {
     handleEndCollision(scene);
   });
 }
-
+function showLevelIndicator(scene) {
+  levelText = scene.add.text(
+    config.width - 20,
+    20,
+    `Level: ${level}`,
+    {
+      fontFamily: 'Arial',
+      fontSize: '20px',
+      color: '#ffffff',
+    }
+  );
+  levelText.setOrigin(1, 0);
+}
 function switchToNewScene(level) {
+  levelText.destroy();
   player.destroy();
   end.destroy()
   game.scene.start('NewScene', {
     level: level
   });
+  
 }
 function handleEndCollision(scene) {
   walls.clear(true, true);
@@ -125,10 +144,12 @@ function handleEndCollision(scene) {
 
   const nextLevel = level + 1;
   if (nextLevel < mazes.length) {
+    level = nextLevel; // Update the level variable
     switchToNewScene(nextLevel);
     player.setPosition(100, 100);
   }
 }
+
 
 let keyDownTime = 0;
 let currentTileIndex = 1;
@@ -213,6 +234,7 @@ class NewScene extends Phaser.Scene {
     const desiredScale = 1.8; // Increase the size by 1.2 times
     player.setScale((playerSize / player.width) * desiredScale);
     end.setScale((playerSize / player.width)*2);
+    showLevelIndicator(this);
     this.physics.add.collider(player, walls);
     this.physics.add.collider(player, end, function () {
       handleEndCollision(this, tileSize);
