@@ -104,8 +104,21 @@ function create(){
 
   this.physics.add.collider(player, walls);
   this.physics.add.collider(player, end, function () {
-    handleEndCollision(scene, tileSize);
+    handleEndCollision(scene);
   });
+}
+
+function handleEndCollision(scene) {
+  walls.clear(true, true);
+  scene.children.each((child) => {
+    if (child instanceof Phaser.GameObjects.Rectangle) {
+      child.destroy();
+    }
+  });
+  const nextLevel = level + 1;
+  if (nextLevel < mazes.length) {
+      console.log('new level')    
+  }
 }
 
 let keyDownTime = 0;
