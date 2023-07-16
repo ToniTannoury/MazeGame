@@ -1,8 +1,6 @@
 import Phaser from 'phaser';
 
 
-// import Phaser from 'phaser';
-
 const config = {
   type: Phaser.AUTO,
   width: 1370,
