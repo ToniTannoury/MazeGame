@@ -108,6 +108,15 @@ function create(){
   });
 }
 
+let keyDownTime = 0;
+let currentTileIndex = 1;
+const tileIndexes = {
+  down: ['00', '01', '02' , '03'],
+  left: ['05', '06', '07' , '08'],
+  right: ['11', '12', '13' , '14'],
+  up: ['15', '16', '17' , '18']
+};
+
 function update() {
   const cursors = this.input.keyboard.createCursorKeys();
 
@@ -115,13 +124,20 @@ function update() {
 
   if (cursors.left.isDown) {
     player.setVelocityX(-120);
+    handleKeyInput(this,'left');
   } else if (cursors.right.isDown) {
     player.setVelocityX(120);
+    handleKeyInput(this,'right');
   } else if (cursors.up.isDown) {
     player.setVelocityY(-120);
+    handleKeyInput(this,'up');
   } else if (cursors.down.isDown) {
     player.setVelocityY(120);
-  } 
+    handleKeyInput(this,'down');
+  } else {
+    keyDownTime = 0;
+    currentTileIndex = 1;
+  }
 }
 
 function handleKeyInput(scene, key) {
