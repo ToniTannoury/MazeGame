@@ -20,7 +20,10 @@ const config = {
   },
 };
 
-
+let walls;
+let player;
+let level = 0;
+let end;
 const mazes = [
   [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ],
@@ -83,12 +86,36 @@ function preload(){
 }
 
 function create(){
-
+  walls = this.physics.add.staticGroup();
+  createMaze.call(this, level);
+  player = this.physics.add.sprite(90, 90, 'tile001');
 }
 
 function update(){
 
 }
 
-// game.scene.start('scene');
+function createMaze(level) {
+  const tileSize = 40;
+  for (let row = 0; row < mazes[level].length; row++) {
+    for (let col = 0; col < mazes[level][row].length; col++) {
+      const tileValue = mazes[level][row][col];
+      if (tileValue === 0) {
+        walls.create(col * tileSize + tileSize / 2, row * tileSize + tileSize / 2,'wallImage' );
+      } else if (tileValue === 1) {
+        const pathSprite = this.add.rectangle(
+          col * tileSize + tileSize / 2,
+          row * tileSize + tileSize / 2,
+          tileSize,
+          tileSize,
+          0xffffff
+        );
+        pathSprite.setOrigin(0.5, 0.5);
+      }
+    }
+  }
+}
+
+
 const game = new Phaser.Game(config);
+game.scene.start('scene');
