@@ -5,6 +5,7 @@ const config = {
   type: Phaser.AUTO,
   width: 1370,
   height: 800,
+  parent: 'game-container', // Specify the ID of the parent element
   physics: {
     default: 'arcade',
     arcade: {
